@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "http://localhost:3000/cocktails", class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "/assets/logo.png" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,13 @@
     </ul>
   </div>
 </div>
-
+<%= image_tag "/assets/fraise.png", alt: "alttext", width: 300, height: 300%>
 <div class="container">
   <div class="row">
       <div class="col">
         <h1><%= @cocktail.name %> </h1>
         <h2>Notre recette pour réussir son <%= @cocktail.name %> : </h2>
-        <%= image_tag "/assets/fraise.png", alt: "alttext", width: 300, height: 300%>
+
          <% @cocktail.doses.each do |dose| %>
          <ul>
            <li><%=dose.description %> de <%= dose.ingredient.name %></li>
