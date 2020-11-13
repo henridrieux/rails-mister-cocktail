@@ -1,0 +1,42 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <%= link_to "http://localhost:3000/cocktails", class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Back to home", "http://localhost:3000/cocktails", class: "btn btn-danger" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br>
+
+<div class="container" id="form">
+  <div class="row">
+    <div class="col">
+      <h1>Create a new cocktail</h1>
+
+      <div ><%= simple_form_for [@cocktail] do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Submit", class: "btn btn-primary"%>
+      <% end %>
+
+      <br>
+      <br>
+      <img src="/assets/crea.jpg" class="card-img-top" alt="...">
+      <br>
+      <br>
+      <%= link_to "Back to the home", cocktails_path , class: "btn btn-danger" %>
+      <br>
+      <br>
+      </div>
+    </div>
+  </div>
+</div>

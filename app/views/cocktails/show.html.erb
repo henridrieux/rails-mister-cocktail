@@ -1,0 +1,43 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "http://localhost:3000/cocktails", class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "http://localhost:3000/cocktails", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create a cocktail", "http://localhost:3000/cocktails/new", class: "btn btn-danger" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <h1><%= @cocktail.name %> </h1>
+        <h2>Notre recette pour réussir son <%= @cocktail.name %> : </h2>
+        <%= image_tag "/assets/fraise.png", alt: "alttext", width: 300, height: 300%>
+         <% @cocktail.doses.each do |dose| %>
+         <ul>
+           <li><%=dose.description %> de <%= dose.ingredient.name %></li>
+           <li><%= link_to "Remove", cocktail_dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+         </ul>
+         <% end %>
+        <hr>
+
+        <h3>Editer votre cocktail ?</h3>
+        <%= render "doses/new"%>
+        <hr>
+        <%= link_to "Back to the home", cocktails_path%>
+      </div>
+    </div>
+  </div>
+</div>

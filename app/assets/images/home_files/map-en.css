@@ -1,0 +1,55 @@
+#carte_map_en {
+	text-align: center;
+}
+#carte_map_en > svg{
+	width: 100%;
+	height: auto;
+	max-width: 700px;
+}
+#carte_map_en svg path {
+	transition: .6s fill;
+	fill: #FFFFFF;
+	cursor: pointer;
+}
+#text_map {
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 20px;
+	height: 56px;
+}
+#text_map > span {
+	font-size: 28px;
+	color: #1d2a4b;
+	text-align: left;
+	font-family: 'Pacifico';
+	font-weight: 400;
+	font-style: normal;
+}
+#carte_map_en > svg text {
+    font-size: 7px;
+    fill: #fff;
+    cursor: pointer;
+}
+#carte_map_en > svg #text-Z9 {
+	font-size: 6px;
+}
+#carte_map_en > svg #text-Z13 {
+	font-size: 6px;
+} 
+#carte_map_en > svg #text-Z7 {
+/*	fill: #1d2a4b;*/
+}
+#carte_map_en > svg text tspan.prod {
+	font-family: 'Pacifico';
+	font-style: normal;
+}
+@media screen and (max-width: 500px) {
+	#text_map,
+	#text_map > span {
+		font-size: 20px;
+	}
+}
+
+.nm-menu li a:hover{
+	color: #db1430!important;
+}

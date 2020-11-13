@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Liste des ingredients</h1>
+
+      <% @ingredients.each do |ingredient| %>
+        <ul>
+          <li><%= ingredient.name %></li>
+        </ul>
+      <% end %>
+      <hr>
+      <%= link_to "Ajouter un ingredient", new_ingredient_path %>
+      <hr>
+      <%= link_to "Revenir à la home", cocktails_path %>
+    </div>
+  </div>
+</div>

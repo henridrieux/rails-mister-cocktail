@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Add a new ingredient</h1>
+
+      <%= simple_form_for [@ingredient] do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Submit review", class: "btn btn-primary" %>
+      <% end %>
+
+      <%= link_to "Back to the home", ingredients_path %>
+
+    </div>
+  </div>
+</div>
