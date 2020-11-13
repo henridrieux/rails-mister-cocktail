@@ -9,7 +9,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 100px;
+  width: 120px;
 }
 
 .container {
@@ -25,3 +25,23 @@ body {
   margin-top: -80px;
 }
 
+.footer {
+  margin-top: 30px;
+  height: 200px;
+  background-color: #2C2B2B;
+  color: grey;
+  text-align: center;
+}
+
+.footer li {
+  color: #167FFB;
+  list-style: none;
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 50px;
+  padding-right: 15px;
+}
+
+// #photo {
+//   width: 288px;
+// }
