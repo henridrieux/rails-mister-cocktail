@@ -21,17 +21,15 @@
 <div class="container" id="form">
   <div class="row">
     <div class="col">
-      <h1>Create a new cocktail</h1>
+      <h1>Create your own cocktail</h1>
 
       <div ><%= simple_form_for [@cocktail] do |f| %>
         <%= f.input :name %>
         <%= f.input :photo, as: :file %>
         <%= f.submit "Submit", class: "btn btn-primary"%>
       <% end %>
-
       <br>
-      <br>
-      <img src="/assets/crea.jpg" class="card-img-top" alt="...">
+      <%= cl_image_tag "Bartenderpouringcocktailjpg5bfe952439b4bjpg_5c18f68bacf7c_vezk4p", height: 500, width: 700, crop: :fill %>
       <br>
       <br>
       <%= link_to "Back to the home", cocktails_path , class: "btn btn-danger" %>

@@ -18,26 +18,29 @@
     </ul>
   </div>
 </div>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+
 <div class="container">
   <div class="row">
-      <div class="col">
-        <h1><%= @cocktail.name %> </h1>
-        <h2>Notre recette pour réussir son <%= @cocktail.name %> : </h2>
+    <div class="col">
+      <h1><%= @cocktail.name %> </h1>
+      <h2>Notre recette pour réussir son <%= @cocktail.name %> : </h2>
+      <% @cocktail.doses.each do |dose| %>
+       <ul>
+         <li><%=dose.description %> de <%= dose.ingredient.name %></li>
+         <li><%= link_to "Remove", cocktail_dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+       </ul>
+       <% end %>
 
-         <% @cocktail.doses.each do |dose| %>
-         <ul>
-           <li><%=dose.description %> de <%= dose.ingredient.name %></li>
-           <li><%= link_to "Remove", cocktail_dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
-         </ul>
-         <% end %>
-        <hr>
-
-        <h3>Editer votre cocktail ?</h3>
-        <%= render "doses/new"%>
-        <hr>
-        <%= link_to "Back to the home", cocktails_path%>
+      <div id="tof">
+        <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300%>
       </div>
+      <hr>
+
+      <h3>Editer votre cocktail ?</h3>
+      <%= render "doses/new"%>
+      <hr>
+      <%= link_to "Back to the home", cocktails_path , class: "btn btn-danger" %>
+    </div>
     </div>
   </div>
 </div>
