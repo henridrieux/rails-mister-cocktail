@@ -1,8 +1,17 @@
 // Specific CSS for your home-page
+.home {
+  background-image: url('https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-
+  margin-top: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,23 +22,37 @@
   width: 140px;
 }
 
+.navbar-lewagon1 {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon1 .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon1 .navbar-brand img {
+  width: 140px;
+}
+
+
 .container {
   margin-top: 50px;
 }
 
 body {
-  background-color: #E3E3E3;
+  background-color: #d6d2c4;
 }
 
 #tof {
-  margin-left: 700px;
+  margin-left: 760px;
   margin-top: -80px;
 }
 
 .footer {
-  margin-top: 30px;
+  // margin-top: 30px;
   height: 200px;
-  background-color: #2C2B2B;
+  background-color: #050303;
   color: grey;
   text-align: center;
 }
@@ -64,4 +87,30 @@ h5 {
 
 #title{
   margin-top: 20px;
+}
+
+.createanewcocktail {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.file {
+  color: grey;
+}
+
+.string {
+  color: grey;
+}
+
+.form-control {
+  width: 30%;
+}
+
+.show {
+    text-align: left;
+}
+
+#listing {
+  margin-top: -300px;
 }

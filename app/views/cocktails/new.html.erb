@@ -1,51 +1,57 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
-  <%= link_to cocktails_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>
-  <% end %>
+<div style="background-image: url(https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60); background-size: cover;">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon1 fixed-top" >
+    <%= link_to cocktails_path, class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+    <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "Back to home", cocktails_path, class: "btn btn-danger" %>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Back to home", cocktails_path, class: "btn btn-danger" %>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<br>
+  <br>
 
-<div class="container" id="form">
-  <div class="row">
-    <div class="col">
-      <h1>Create your own cocktail</h1>
+  <div class="container" id="form">
+    <div class="row">
+      <div class="col">
+        <h1>Create your own cocktail</h1>
 
-      <div ><%= simple_form_for [@cocktail] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit "Submit", class: "btn btn-primary"%>
-      <% end %>
-      <br>
-      <%= cl_image_tag "Bartenderpouringcocktailjpg5bfe952439b4bjpg_5c18f68bacf7c_vezk4p", height: 500, width: 700, crop: :fill %>
-      <br>
-      <br>
-      <%= link_to "Back to the home", cocktails_path , class: "btn btn-danger" %>
-      <br>
-      <br>
+        <div ><%= simple_form_for [@cocktail] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :photo, as: :file %>
+          <br>
+          <%= f.submit "Create !", class: "btn btn-primary"%>
+        <% end %>
+        <br>
+        <br>
+        <div class="createanewcocktail">
+        <p>Les liqueurs artisanales Cambusier sont les ambassadrices du savoir faire et de la qualité à la francais, reconnue dans le monde entier.</p>
+        <p>À ce titre, plusieurs personnalités de la sphère culinaire hexagonale telles que Christian Le Squer, Fabrice Sommier ou encore Christophe Davoine ont pris part à cette aventure humaine et « spirituelle » de manière à nous apporter leurs expériences hors du commun.</p>
+        </div>
+</p>
+        <br>
+        <%= link_to "Back to the home", cocktails_path , class: "btn btn-danger" %>
+        <br>
+        <br>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="footer">
     <ul>
-      <li><i class="fab fa-facebook-f"></i></li>
-      <li><i class="fab fa-github"></i></li>
-      <li><i class="fab fa-twitter"></i></li>
-      <li><i class="fab fa-instagram"></i></li>
+      <li><a href="https://www.facebook.com/liqueurcambusier" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://github.com/henridrieux" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.instagram.com/liqueurs_cambusier/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://twitter.com/CambusierFrance" target="_blank"><i class="fab fa-instagram"></i></a></li>
     </ul>
     <p>This website was coded with 🍺 at Le Wagon.</p>
 </div>
